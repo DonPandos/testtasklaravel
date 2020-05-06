@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  if(Auth::check()) return view('home');
+  return view('auth.login');
 });
 
 Route::get('/form', function() {
@@ -22,3 +23,7 @@ Route::get('/form', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('admin/forms', 'HomeController@admin')->middleware('admin')->name('admin-forms');
+
+Route::get('/form/submit', 'FormController@submit')->name('form-submit');
