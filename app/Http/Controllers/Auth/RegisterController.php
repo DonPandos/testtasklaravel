@@ -38,6 +38,8 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->middleware('guest:admin');
+        $this->middleware('guest:user');
     }
 
     /**
@@ -68,5 +70,37 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function showAdminRegisterForm()
+   {
+       return view('auth.register', ['url' => 'admin']);
+   }
+
+   public function showUserRegisterForm()
+   {
+       return view('auth.register', ['url' => 'user']);
+   }
+
+   protected function createAdmin(Request $request)
+   {
+       $this->validator($request->all())->validate();
+       $admin = Admin::create([
+           'name' => $request['name'],
+           'email' => $request['email'],
+           'password' => Hash::make($request['password']),
+       ]);
+       return redirect()->intended('login/admin');
+   }
+
+   protected function createUser(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $writer = Writer::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/user');
     }
 }
