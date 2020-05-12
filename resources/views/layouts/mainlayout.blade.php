@@ -26,9 +26,6 @@
             <li><a href="" class="uk-button ">Home</a></li>
             <li><a href="" class="uk-button ">About</a></li>
             <li><a href="" class="uk-button ">Contact</a></li>
-            <?php if(auth()->user()->isAdmin == 1){?>
-                <li><a href="" class="uk-button ">Add article</a></li>
-            <?php } ?>
           </ul>
         </div>
       </div>
@@ -40,10 +37,10 @@
   <div class="footer" uk-grid>
     <div class="uk-width-1-2@m" uk-grid>
       <div class="uk-width-1-6@m"></div>
-      <div class="uk-width-5-6@m">asd</div>
+      <div class="uk-width-5-6@m"></div>
     </div>
     <div class="uk-width-1-2@m" uk-grid>
-      <div class="uk-width-5-6@m">asd</div>
+      <div class="uk-width-5-6@m"></div>
       <div class="uk-width-1-6@m"></div>
     </div>
   </div>

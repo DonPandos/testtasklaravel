@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\FeedbackFormRequest;
 use App\Feedback;
+use App\Article;
+use \Datetime;
+
 
 class FormController extends Controller
 {
@@ -20,6 +23,17 @@ class FormController extends Controller
 
     return redirect()->route('home');
 
+  }
+
+  public function articlesubmit(Request $req){
+    $article = new Article();
+    $article->heading = $req->input('heading');
+    $article->text = $req->input('text');
+    $article->image = $req->input('image');
+    $article->date = new DateTime();
+
+    $article->save();
+    return redirect()->route('adminmenu');
   }
 
 }
