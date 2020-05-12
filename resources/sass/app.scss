@@ -6,3 +6,55 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+textarea{
+  height: 150px;
+  line-height: 15px;
+}
+
+body{
+  height: 100%;
+  background: #FFFFFF;
+}
+
+.header {
+  height: 100px;
+  background: #FFFFFF;
+}
+
+.header-button-text {
+  color: #000000;
+}
+
+.header-logo {
+  height: 120px;
+  padding: 0 10px 0 10px;
+  background: #01939A;
+}
+
+.header-logo-text {
+  color: #FAFAFA;
+  font-size: 40px;
+  margin-top: 60px;
+}
+
+.header-menu {
+  margin-top: 55px;
+  list-style: none;
+  float: left;
+  padding-left: 0px;
+}
+
+.header-menu li {
+  display: inline;
+  font-size: 32px;
+}
+
+.content {
+  min-height: calc(100vh - 100px);
+}
+
+.footer {
+  background: #FFFFFF;
+  margin-top: -50px;
+}

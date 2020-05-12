@@ -28,6 +28,15 @@ class HomeController extends Controller
     }
 
     public function admin(){
-      return view('admin', ['feedbacks' => Feedback::all()]); 
+      return view('admin', ['feedbacks' => Feedback::all()]);
     }
+
+    public function article(){
+      return view('articleform');
+    }
+
+    public function adminmenu(){
+      return view('adminmenu');
+    }
+
 }

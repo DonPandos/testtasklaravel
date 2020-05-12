@@ -21,4 +21,5 @@ class FormController extends Controller
     return redirect()->route('home');
 
   }
+
 }

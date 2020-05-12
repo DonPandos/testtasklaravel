@@ -38,7 +38,7 @@
 
     <div>
     <label for="phone" class="uk-form-label">Номер телефона</label>
-    <input type="tel" name="phone" id="phone" placeholder="Введите номер телефона" class="uk-input">
+    <input type="tel" name="phone" id="phone" placeholder="Введите номер телефона" class="uk-input" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
     </div>
 
     <div>
