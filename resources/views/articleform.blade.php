@@ -12,7 +12,7 @@
       </ul>
     </div>
     @endif
-    <form action="{{ route('articleform-submit') }}"  class="uk-form-horizontal uk-form-width-large">
+    <form action="{{ route('articleform-submit') }}"  method="post" class="uk-form-horizontal uk-form-width-large" enctype="multipart/form-data">
       @csrf
 
       <div>
@@ -22,13 +22,12 @@
 
       <div>
         <label for="text" class="uk-form-label">Текст</label>
-        <textarea style="height: 150px;
-        line-height: 20px;" name="text" id="text" placeholder="Введите текст" class="uk-input"></textarea>
+        <textarea style="height: 150px; line-height: 20px;" name="text" id="text" placeholder="Введите текст" class="uk-input"></textarea>
       </div>
 
       <div>
-        <label for="image" class="uk-form-label">Картинка</label>
-        <input type="file" name="image" id="image" class="uk-input">
+        <label for="article_image" class="uk-form-label">Картинка</label>
+        <input type="file" name="article_image" id="article_image" class="uk-input">
       </div>
 
 

@@ -56,8 +56,8 @@ body{
 }
 
 .footer {
-  background: #01939A;
-  margin-top: -30px;
+  // background: #01939A;
+  margin-top:50px;
 }
 
 .article{
@@ -78,4 +78,52 @@ body{
 
 .article-created-at {
   margin-top: -10px;
+}
+
+.about-title {
+  font-size: 40px;
+}
+
+.about-article {
+
+}
+
+.about-article-title {
+  font-size: 34px;
+  color: #01939A;
+}
+
+.about-article-text {
+  padding-bottom: 30px;
+}
+
+.person-info {
+  text-align: center;
+}
+
+.person-info-image {
+
+}
+
+.person-info-name {
+  font-size: 18px;
+  color: #01939A;
+}
+
+.person-info-description {
+  margin-top: -20px;
+}
+
+.contact-map {
+  text-align: center;
+}
+
+.contact-map-title {
+  font-size: 34px;
+  color: #01939A;
+}
+
+.contact-section-title {
+  font-size: 26px;
+  color: #01939A;
 }

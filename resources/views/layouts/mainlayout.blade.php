@@ -23,9 +23,9 @@
         </div>
         <div class="uk-width-3-4@m">
           <ul class="uk-list-inline header-menu">
-            <li><a href="" class="uk-button ">Home</a></li>
-            <li><a href="" class="uk-button ">About</a></li>
-            <li><a href="" class="uk-button ">Contact</a></li>
+            <li><a href="{{ route('main') }}" class="uk-button ">Home</a></li>
+            <li><a href="{{ route('about') }}" class="uk-button ">About</a></li>
+            <li><a href="{{ route('contact') }}" class="uk-button ">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -35,14 +35,23 @@
   @yield('content')
   </div>
   <div class="footer" uk-grid>
-    <div class="uk-width-1-2@m" uk-grid>
-      <div class="uk-width-1-6@m"></div>
-      <div class="uk-width-5-6@m"></div>
+    <!-- <div class="uk-width-1-2@m" uk-grid>
+
     </div>
     <div class="uk-width-1-2@m" uk-grid>
-      <div class="uk-width-5-6@m"></div>
-      <div class="uk-width-1-6@m"></div>
+
+    </div> -->
+    <div class="uk-width-1-6"></div>
+    <div class="uk-width-5-6">
+      <div uk-grid>
+        <div class="uk-width-5-6">
+          <hr class="about-title-line" align="center" width="100%" size="2" color="#000000" />
+          <p>Различная информация Различная информация Различная информация Различная информация Различная информация Различная информация Различная информация Различная информация Различная информация Различная информация</p>
+        </div>
+        <div class="uk-width-1-6"></div>
+      </div>
     </div>
+
   </div>
 </body>
 </html>

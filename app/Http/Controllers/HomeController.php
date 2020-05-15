@@ -39,4 +39,12 @@ class HomeController extends Controller
       return view('adminmenu');
     }
 
+    public function about(){
+      return view('about');
+    }
+
+    public function contact(){
+      return view('contact');
+    }
+
 }

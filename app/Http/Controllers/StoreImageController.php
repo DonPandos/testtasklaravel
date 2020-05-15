@@ -12,9 +12,9 @@ class StoreImageController extends Controller
 {
   public function fetch_image($image_id){
     $article = Article::findOrFail($image_id);
-    Debugbar::info($article);
+    //Debugbar::info(base64_decode($article->image));
     $image_file = Image::make($article->image);
-    $response = Response::make($image_file->encode('png'));
+    $response = Response::make(Storage::get('/public/img/' . $article->filename)));
     $response->header('Content-Type', 'image/png');
     return $response;
   }

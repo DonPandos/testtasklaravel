@@ -27,12 +27,14 @@ Route::get('/form/submit', 'FormController@submit')->name('form-submit');
 
 Route::get('/admin/forms/article', 'HomeController@article')->middleware('admin')->name('article-form');
 
-Route::get('/admin/forms/article/submit', 'FormController@articlesubmit')->middleware('admin')->name('articleform-submit');
+Route::post('/admin/forms/article/submit', 'FormController@articlesubmit')->middleware('admin')->name('articleform-submit');
 
 Route::get('/admin', 'HomeController@adminmenu')->middleware('admin')->name('adminmenu');
 
-Route::get('/main', function(){
-  return view('mainpage');
-});
+Route::get('/main', 'MainpageController@index')->name('main');
+
+Route::get('/about', 'HomeController@about')->name('about');
+
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::get('mainpage/fetch_image/{id}', 'StoreImageController@fetch_image');
