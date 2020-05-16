@@ -7,7 +7,7 @@
   <div class="uk-width-5-6">
     <div uk-grid>
       <div class="uk-width-5-6">
-        <h1 class="about-title">Articles</h1>
+        <h1 class="about-title">Home</h1>
         <hr class="about-title-line" align="center" width="100%" size="2" color="#000000" />
         @foreach($articles as $article)
         <!-- <div class="article" uk-grid>
